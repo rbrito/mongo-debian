@@ -7,10 +7,10 @@
 #include "mongo/platform/unordered_set.h"
 #define hash_set mongo::unordered_set
 
-#if defined OS_LINUX || defined OS_MACOSX || defined __sunos__ || defined __freebsd__
+#if ! defined OS_WINDOWS
 #define HASH_NAMESPACE_START namespace std { namespace tr1 {
 #define HASH_NAMESPACE_END }}
-#elif defined OS_WINDOWS
+#else
 #define HASH_NAMESPACE_START namespace std {
 #define HASH_NAMESPACE_END }
 #endif
