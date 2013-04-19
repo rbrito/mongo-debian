@@ -31,7 +31,9 @@
 #include <pthread.h>
 #include <semaphore.h>
 #include <signal.h>
+#ifndef __FreeBSD_kernel__
 #include <sys/prctl.h>
+#endif
 #include <sys/time.h>
 #include <sys/resource.h>
 #include <sys/syscall.h>
