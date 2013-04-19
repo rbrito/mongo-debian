@@ -326,6 +326,8 @@ libdeps.setup_environment( env )
 
 if env['PYSYSPLATFORM'] == 'linux3':
     env['PYSYSPLATFORM'] = 'linux2'
+if 'gnukfreebsd' in env['PYSYSPLATFORM']:
+    env['PYSYSPLATFORM'] = 'linux2'
 if 'freebsd' in env['PYSYSPLATFORM']:
     env['PYSYSPLATFORM'] = 'freebsd'
 
@@ -506,7 +508,7 @@ if "darwin" == os.sys.platform:
        env.Append( EXTRACPPPATH=filterExists(["/sw/include" , "/opt/local/include"]) )
        env.Append( EXTRALIBPATH=filterExists(["/sw/lib/", "/opt/local/lib"]) )
 
-elif os.sys.platform.startswith("linux"):
+elif os.sys.platform.startswith("linux") or os.sys.platform.startswith("gnukfreebsd"):
     linux = True
     platform = "linux"
 
