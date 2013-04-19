@@ -1,0 +1,16 @@
+/files
+/mongodb-clients.substvars
+/mongodb-clients/
+/mongodb-dev.substvars
+/mongodb-dev/
+/mongodb-server.postinst.debhelper
+/mongodb-server.postrm.debhelper
+/mongodb-server.prerm.debhelper
+/mongodb-server.substvars
+/mongodb-server/
+/mongodb.substvars
+/stamp-copyright-check
+/stamp-scons-build
+/stamp-upstream-cruft
+/tmp-test/
+/tmp/
