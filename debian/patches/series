@@ -5,3 +5,4 @@
 0005-kfreebsd-does-not-have-sys-prctl.h.patch
 0006-ARM-support-for-ASM-operations-in-MongoDB.patch
 0007-Fix-ARM-alignment-problems.patch
+0008-Enable-building-shared-libraries-for-clients.patch
