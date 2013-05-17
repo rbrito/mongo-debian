@@ -79,7 +79,8 @@ Description: object/document-oriented database (server package)
  High performance, scalability, and reasonable depth of
  functionality are the goals for the project.
  .
- This package contains the server itself.
+ This package contains the server itself (mongod) and the sharding
+ server/load-balancer (mongos).
 
 Package: mongodb-clients
 Architecture: amd64 i386 kfreebsd-amd64 kfreebsd-i386
@@ -104,7 +105,8 @@ Description: object/document-oriented database (client apps)
  High performance, scalability, and reasonable depth of
  functionality are the goals for the project.
  .
- This package contains the various client applications.
+ This package contains the standard administrative shell (mongo) and other
+ utilities for administration or analysis of performance of the server.
 
 Package: mongodb-dev
 Section: libdevel
