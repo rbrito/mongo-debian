@@ -4,7 +4,8 @@ Priority: extra
 Maintainer: Antonin Kral <A.Kral@sh.cvut.cz>
 Uploaders:
  Roberto C. Sanchez <roberto@connexer.com>,
- Jérémy Lal <kapouer@melix.org>
+ Jérémy Lal <kapouer@melix.org>,
+ Rogério Brito <rbrito@ime.usp.br>
 Build-Depends:
  cdbs (>= 0.4.73~),
  debhelper (>= 9),
