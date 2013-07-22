@@ -1,0 +1,41 @@
+From: Viktar Vauchkevich <victorenator@gmail.com>
+Date: Fri, 19 Jul 2013 13:28:54 +0300
+Subject: add mongodb.service by use dh_systemd
+
+Closes: #717321
+
+[rbrito: Added bug number that is fixed by this commit]
+---
+ debian/control                        |  1 +
+ debian/mongodb-server.mongodb.service | 10 ++++++++++
+ 2 files changed, 11 insertions(+)
+ create mode 100644 debian/mongodb-server.mongodb.service
+
+diff --git a/debian/control b/debian/control
+index 0909f39..8222816 100644
+--- a/debian/control
++++ b/debian/control
+@@ -9,6 +9,7 @@ Uploaders:
+ Build-Depends:
+  cdbs (>= 0.4.73~),
+  debhelper (>= 9),
++ dh-systemd (>= 1.5),
+  libboost-date-time-dev,
+  libboost-dev,
+  libboost-filesystem-dev,
+diff --git a/debian/mongodb-server.mongodb.service b/debian/mongodb-server.mongodb.service
+new file mode 100644
+index 0000000..a73d760
+--- /dev/null
++++ b/debian/mongodb-server.mongodb.service
+@@ -0,0 +1,10 @@
++[Unit]
++Description=An object/document-oriented database
++Documentation=man:mongod(1)
++
++[Service]
++User=mongodb
++ExecStart=/usr/bin/mongod --config /etc/mongodb.conf
++
++[Install]
++WantedBy=multi-user.target
